@@ -1,0 +1,3 @@
+// Auto-generated Relation for {{From}} <-> {{To}}
+use App\Http\Controllers\Api\relations\{{From}}{{To}}Controller;
+Route::get('relations/{{from_lower}}', [{{From}}{{To}}Controller::class, 'all{{From}}']);

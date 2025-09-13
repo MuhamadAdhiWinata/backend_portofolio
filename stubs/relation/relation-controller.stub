@@ -1,0 +1,17 @@
+<?php
+
+namespace App\Http\Controllers\Api\relations;
+
+use App\Http\Controllers\Controller;
+use App\Models\{{From}};
+use App\Http\Resources\relations\{{From}}RelasiResource;
+
+class {{From}}{{To}}Controller extends Controller
+{
+    public function all{{From}}()
+    {
+        $data = {{From}}::with('{{to_lower}}s')->latest()->paginate(10);
+
+        return new {{From}}RelasiResource(true, 'List {{From}} dengan relasi {{To}}', $data);
+    }
+}
