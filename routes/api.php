@@ -30,3 +30,18 @@ Route::prefix('profile')->name('profile.')->group(function () {
     Route::put('/{id}', UpdateProfileController::class);
     Route::delete('/{id}', DeleteProfileController::class);
 });
+
+// Auto-generated for Contact
+use App\Http\Controllers\Api\contact\CreateContactController;
+use App\Http\Controllers\Api\contact\GetAllContactController;
+use App\Http\Controllers\Api\contact\GetOneContactController;
+use App\Http\Controllers\Api\contact\UpdateContactController;
+use App\Http\Controllers\Api\contact\DeleteContactController;
+
+Route::prefix('contact')->name('contact.')->group(function () {
+    Route::get('/', GetAllContactController::class);
+    Route::get('/{id}', GetOneContactController::class);
+    Route::post('/', CreateContactController::class);
+    Route::put('/{id}', UpdateContactController::class);
+    Route::delete('/{id}', DeleteContactController::class);
+});
