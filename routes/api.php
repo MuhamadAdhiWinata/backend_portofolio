@@ -75,3 +75,18 @@ Route::prefix('project')->name('project.')->group(function () {
     Route::put('/{id}', UpdateProjectController::class);
     Route::delete('/{id}', DeleteProjectController::class);
 });
+
+// Auto-generated for Skill
+use App\Http\Controllers\Api\skill\CreateSkillController;
+use App\Http\Controllers\Api\skill\GetAllSkillController;
+use App\Http\Controllers\Api\skill\GetOneSkillController;
+use App\Http\Controllers\Api\skill\UpdateSkillController;
+use App\Http\Controllers\Api\skill\DeleteSkillController;
+
+Route::prefix('skill')->name('skill.')->group(function () {
+    Route::get('/', GetAllSkillController::class);
+    Route::get('/{id}', GetOneSkillController::class);
+    Route::post('/', CreateSkillController::class);
+    Route::put('/{id}', UpdateSkillController::class);
+    Route::delete('/{id}', DeleteSkillController::class);
+});
