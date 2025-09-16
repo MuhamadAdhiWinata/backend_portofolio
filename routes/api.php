@@ -60,3 +60,18 @@ Route::prefix('testinmonial')->name('testinmonial.')->group(function () {
     Route::put('/{id}', UpdateTestinmonialController::class);
     Route::delete('/{id}', DeleteTestinmonialController::class);
 });
+
+// Auto-generated for Project
+use App\Http\Controllers\Api\project\CreateProjectController;
+use App\Http\Controllers\Api\project\GetAllProjectController;
+use App\Http\Controllers\Api\project\GetOneProjectController;
+use App\Http\Controllers\Api\project\UpdateProjectController;
+use App\Http\Controllers\Api\project\DeleteProjectController;
+
+Route::prefix('project')->name('project.')->group(function () {
+    Route::get('/', GetAllProjectController::class);
+    Route::get('/{id}', GetOneProjectController::class);
+    Route::post('/', CreateProjectController::class);
+    Route::put('/{id}', UpdateProjectController::class);
+    Route::delete('/{id}', DeleteProjectController::class);
+});
