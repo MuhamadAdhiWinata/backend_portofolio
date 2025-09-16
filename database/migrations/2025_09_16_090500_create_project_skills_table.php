@@ -13,9 +13,11 @@ return new class extends Migration
     {
         Schema::create('project_skills', function (Blueprint $table) {
             $table->id();
-            $table->integer('project_id');
-            $table->integer('skill_id');
+            $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
+            $table->foreignId('skill_id')->constrained('skills')->onDelete('cascade');
             $table->timestamps();
+
+            $table->unique(['project_id', 'skill_id']); // mencegah duplikat
         });
     }
 
